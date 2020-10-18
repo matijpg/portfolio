@@ -1,6 +1,7 @@
 :root{
    --primary__bg:#6c5ce7;
    --title__color:#2d3436;
+   --font__primary: 2rem;
 }
 
 html{
@@ -19,7 +20,7 @@ p{
 body{
    padding:0;
    margin:0;
-   font-family: monospace;
+   font-family: 'Roboto Mono', monospace;
 }
 
 /*utils*/
@@ -36,6 +37,30 @@ body{
    align-items: center;
 }
 
+.aboutme{
+   max-width: 500px;
+   max-height: 500px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top:2rem;
+}
+
+.aboutme__coffe svg{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width:40rem;
+   height:60px
+}
+
+.aboutme__name {
+   color: var(--primary__bg);
+   font-family: var(--font__primary);
+}
+
 .container{
    height: auto;
    max-width: 100%;
@@ -46,7 +71,7 @@ body{
 }
 
 .title{
-   font-size: 2rem;
+   font-size: 1.7rem;
    color:var(--title__color);
 }
 
@@ -62,7 +87,6 @@ body{
    padding:65px 50px 45px;
    flex:1 100%;
    border: .3px solid rgba(145, 145, 145, 0.78);
-   border-radius:5%;
    margin-bottom:1rem;
    margin-top:1rem;
    -webkit-box-shadow: 0px 0px 15px -10px rgba(99,99,99,0.78);
@@ -79,21 +103,50 @@ body{
    margin: 0 auto;
    padding:28px;
    background-color: var(--primary__bg);
-   border-radius: 50%;
-}
-
-svg{
-   max-width: 88px;
 }
 
 svg g {
    fill: ffffff;
 }
 
+.contact{
+   max-width:1200px;
+   padding: 0 10px;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   align-items:center;
+   margin-bottom: 50px;
+}
+
+.contact__title{
+   font-size:1.7rem;
+   color:var(--title__color);
+}
+
+.contact__social{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   max-width: 150px;
+   align-items: center;
+   width: 100%;
+   margin: 1rem 0rem 2rem 0rem;
+}
+
+.contact__icon{
+   max-height: 100px;
+}
+
+.contact__icon svg {
+   height: 43px;
+   padding: 2px;
+}
+
 .section-footer{
    background-color: var(--primary__bg);
    width:100%;
-   height:50px;
+   height:70px;
    display: flex;
 }
 
@@ -114,7 +167,6 @@ svg g {
 
 @media(min-width: 1024px){
    .container{
-      height:100vh;
       display: grid;
    }
    .cards__box{
