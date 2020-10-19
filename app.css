@@ -8,7 +8,7 @@ html{
    box-sizing: border-box;
 }
 
-*,  *:before, *:after {
+*,  *::before, *::after {
    box-sizing: inherit;
 }
 
@@ -38,8 +38,7 @@ body{
 }
 
 .aboutme{
-   max-width: 500px;
-   max-height: 500px;
+   max-height: 800px;
    width: 100%;
    display: flex;
    justify-content: center;
@@ -47,6 +46,7 @@ body{
    flex-direction: column;
    margin-top:2rem;
 }
+
 
 .aboutme__coffe svg{
    display: flex;
@@ -59,6 +59,48 @@ body{
 .aboutme__name {
    color: var(--primary__bg);
    font-family: var(--font__primary);
+   margin-bottom:2rem;
+}
+
+.aboutme__name h2{
+   margin-bottom: 5px;
+}
+
+.aboutme__contain{
+   width:100%;
+   background-color: var(--primary__bg);
+   box-shadow:0px 2px 20px 2px #00000070;
+}
+
+.aboutme__descr{
+   max-width:1200px;
+   margin: 0 auto;
+   padding: 4rem 1rem;
+   text-align: left;
+   font-size:calc(1rem + 3px);
+}
+
+.aboutme__paragraph{
+   line-height: 1.8rem;
+   margin-bottom: 20px;
+   font-weight: 400;
+   color:var(--title__color);
+}
+
+.aboutme__link{
+   text-decoration: none;
+   cursor: pointer;
+   color:white;
+   transition: all .3s ease-in;
+}
+
+.aboutme__link:hover{
+   color:var(--title__color);
+   box-shadow: var(--title__color);
+}
+
+.aboutme__link:visited{
+   text-decoration:line-through;
 }
 
 .container{
@@ -73,6 +115,19 @@ body{
 .title{
    font-size: 1.7rem;
    color:var(--title__color);
+   position: relative;
+   margin-bottom: 50px;
+}
+
+.title::after{
+   content:' ';
+   width: 20px;
+   height:10px;
+   display: block;
+   position:absolute;
+   background-color: var(--primary__bg);
+   margin-top: 10px;
+   left:49%;
 }
 
 .cards{
@@ -89,9 +144,13 @@ body{
    border: .3px solid rgba(145, 145, 145, 0.78);
    margin-bottom:1rem;
    margin-top:1rem;
-   -webkit-box-shadow: 0px 0px 15px -10px rgba(99,99,99,0.78);
-   -moz-box-shadow: 0px 0px 15px -10px rgba(99,99,99,0.78);
-   box-shadow: 0px 0px 15px -10px rgba(99,99,99,0.78);
+   transition: all .3s ease-in;
+}
+
+.cards__box:hover{
+ -webkit-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   -moz-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
 }
 
 .cards__icon{
@@ -122,6 +181,18 @@ svg g {
 .contact__title{
    font-size:1.7rem;
    color:var(--title__color);
+   position:relative;
+}
+
+.contact__title::after{
+   content:' ';
+   width: 10%;
+   height:10px;
+   display: block;
+   position:absolute;
+   background-color: var(--primary__bg);
+   margin-top: 10px;
+   left:45%;
 }
 
 .contact__social{
@@ -131,7 +202,7 @@ svg g {
    max-width: 150px;
    align-items: center;
    width: 100%;
-   margin: 1rem 0rem 2rem 0rem;
+   margin: 3rem 0rem 2rem 0rem;
 }
 
 .contact__icon{
@@ -141,6 +212,14 @@ svg g {
 .contact__icon svg {
    height: 43px;
    padding: 2px;
+   opacity:.6;
+   cursor:pointer;
+   transition: all .3s ease-in;
+}
+
+.contact__icon svg:hover {
+   opacity:1;
+   transform: scale(1.1);
 }
 
 .section-footer{
@@ -148,6 +227,7 @@ svg g {
    width:100%;
    height:70px;
    display: flex;
+   box-shadow:0px 15px 20px 14px #00000070;
 }
 
 .footer__desc{
