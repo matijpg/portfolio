@@ -75,7 +75,7 @@ body{
 .aboutme__descr{
    max-width:1200px;
    margin: 0 auto;
-   padding: 4rem 1rem;
+   padding: 4rem 2rem;
    text-align: left;
    font-size:calc(1rem + 3px);
 }
@@ -168,6 +168,88 @@ svg g {
    fill: ffffff;
 }
 
+.guide{
+   background-color: #6c5ce740;
+   width:100%;
+   max-height:800px;
+   transition: all .3s ease-in;
+}
+
+.guide:hover{
+   -webkit-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   -moz-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+}
+
+.guide__box{
+   max-width: 1200px;
+   margin:0px auto;
+   padding:50px 25px;
+   display:flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.guide__title{
+   margin:0;
+   margin-bottom:10px;
+   color:var(--title__color);
+   width:100%;
+   text-align: left;
+}
+
+.guide__desc{
+   color: #525252;
+   font-size: calc(.9rem + 3px);
+   padding: 10px 0px;
+   line-height: 1.5rem;
+}
+
+.guide__box__items{
+   display: flex;
+   flex-direction: row;
+   -moz-box-align: center;
+   align-items: center;
+   overflow-x: auto;
+   width: 100%;
+   padding: 2rem;
+}
+
+.guide__column{
+ margin-right: 2rem;
+}
+
+.guide__item{
+   width:250px;
+   height:300px;
+   background: white;
+   margin: 20px 0px 30px 0;
+   -webkit-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   -moz-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+}
+
+.guide__button{
+   background-color: white;
+   border:1px solid var(--title__color);
+   font-family: 'Roboto Mono', monospace;
+   /* height:45px; */
+   padding:20px;
+   width:100%;
+   cursor:pointer;
+   transition: all .3s ease-in;
+}
+
+.guide__button:hover{
+   background-color: var(--primary__bg);
+   border:1px solid white;
+   color:white;
+   -webkit-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   -moz-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+}
+
 .contact{
    max-width:1200px;
    padding: 0 10px;
@@ -222,6 +304,14 @@ svg g {
    transform: scale(1.1);
 }
 
+.cafesito{
+   max-width: 800px;
+}
+
+.cafesito__desc{
+   margin: 2rem 0;
+}
+
 .section-footer{
    background-color: var(--primary__bg);
    width:100%;
@@ -243,6 +333,15 @@ svg g {
       margin-right: 1rem;
       flex:1 calc(50% - 30px);
    }
+   .guide__box{
+      text-align: center;
+   }
+   .guide__title{
+      text-align: center;
+   }
+   .guide__box__items{
+      justify-content: start;
+   }
 }
 
 @media(min-width: 1024px){
@@ -252,5 +351,8 @@ svg g {
    .cards__box{
       margin-right: 1rem;
       flex:1 calc(32% - 30px);
+   }
+   .guide__box__items{
+      justify-content: space-evenly;
    }
 }
