@@ -1,5 +1,9 @@
 :root{
-   --primary__bg:#6c5ce7;
+   /* --primary__bg:#6c5ce7; */
+    --primary__bg:rgb(113, 59, 209);
+   /* --primary__bg:#5f48b3; */
+   /* --primary__bg: rgb(97, 61, 176); */
+   --font__secondary:rgb(228, 222, 241);
    --title__color:#2d3436;
    --font__primary: 2rem;
 }
@@ -65,6 +69,7 @@ body{
 
 .aboutme__name h2{
    margin-bottom: 5px;
+   font-size: calc(1.5em + 1vw);
 }
 
 .aboutme__contain{
@@ -74,20 +79,19 @@ body{
 }
 
 .aboutme__descr{
-   max-width:1200px;
+   max-width:900px;
    margin: 0 auto;
-   padding: 4rem 2rem;
+   padding: 4rem 1rem;
    text-align: left;
-   font-size:calc(1rem + 3px);
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
+   font-size:calc(1.1rem + .3vw);
 }
 
 .aboutme__paragraph{
    line-height: 1.8rem;
-   margin-bottom: 20px;
-   font-weight: 400;
-   color:var(--title__color);
+   margin: 10px 0px;
+   font-weight: 300;
+   color:var(--font__secondary);
+   font-family: 'Roboto', sans-serif;
 }
 
 .aboutme__link{
@@ -95,6 +99,7 @@ body{
    cursor: pointer;
    color:white;
    transition: all .3s ease-in;
+   font-weight: 400;
 }
 
 .aboutme__link:hover{
@@ -116,7 +121,7 @@ body{
 }
 
 .title{
-   font-size: 1.7rem;
+   font-size: calc(1.7rem + .6vw);
    color:var(--title__color);
    position: relative;
    margin-bottom: 50px;
@@ -171,6 +176,18 @@ svg g {
    fill: ffffff;
 }
 
+.cards__title{
+   color: var(--primary__bg);
+   font-size: 1.3rem;
+}
+
+.cards__descr{
+   font-family: 'Roboto', sans-serif;
+   color: rgb(109, 118, 132);
+   font-weight: 300;
+   line-height: 1.6;
+}
+
 .guide{
    background-color: #6c5ce740;
    width:100%;
@@ -192,6 +209,7 @@ svg g {
    justify-content: center;
    flex-direction: column;
    align-items: center;
+   text-align: center;
 }
 
 .guide__title{
@@ -199,7 +217,6 @@ svg g {
    margin-bottom:10px;
    color:var(--title__color);
    width:100%;
-   text-align: left;
 }
 
 .guide__desc{
@@ -220,17 +237,24 @@ svg g {
 }
 
 .guide__column{
- margin-right: 2rem;
+   max-width: 300px;
+   margin-right: 2rem;
 }
 
 .guide__item{
    width:250px;
    height:300px;
-   background: white;
    margin: 20px 0px 30px 0;
    -webkit-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
    -moz-box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
-   box-shadow: 0px 0px 25px -10px rgba(99,99,99,0.9);
+   background: var(--primary__bg);
+   box-shadow: 0px 0px 15px 1px rgba(79, 75, 85, 0.79);
+}
+
+.guide img{
+   object-fit: contain;
+   width: 100%;
+   height: 100%;
 }
 
 .guide__button{
@@ -276,7 +300,7 @@ svg g {
    position:absolute;
    background-color: var(--primary__bg);
    margin-top: 10px;
-   left:45%;
+   left:47%;
 }
 
 .contact__social{
@@ -311,6 +335,7 @@ svg g {
 
 .cafesito__desc{
    margin: 2rem 0;
+   font-family:  'Roboto', sans-serif;
 }
 
 .section-footer{
@@ -341,7 +366,7 @@ svg g {
       text-align: center;
    }
    .guide__box__items{
-      justify-content: start;
+      justify-content: space-around;
    }
 }
 
@@ -355,5 +380,8 @@ svg g {
    }
    .guide__box__items{
       justify-content: space-evenly;
+   }
+   .aboutme__descr{
+      text-align: center;
    }
 }
